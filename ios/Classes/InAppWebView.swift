@@ -1348,7 +1348,8 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate, WKNavi
         configuration.processPool = WKProcessPoolManager.sharedProcessPool
         
         if let options = options {
-            configuration.allowsInlineMediaPlayback = options.allowsInlineMediaPlayback
+            // configuration.allowsInlineMediaPlayback = options.allowsInlineMediaPlayback
+            configuration.allowsInlineMediaPlayback = true
             configuration.suppressesIncrementalRendering = options.suppressesIncrementalRendering
             configuration.selectionGranularity = WKSelectionGranularity.init(rawValue: options.selectionGranularity)!
             
